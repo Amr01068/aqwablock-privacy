@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | Privacy Policy - Aqwa Block</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-color: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --success: #34d399;
+            --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+            --font-en: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-ar);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        body.en {
+            font-family: var(--font-en);
+            direction: ltr;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: var(--bg-secondary);
+            padding: 4px;
+            border-radius: 9999px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 18px;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);
+            font-size: 2rem;
+        }
+
+        .app-info h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.25);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 span.icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+            font-size: 0.98rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        body.en ul {
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-right: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: #cbd5e1;
+        }
+
+        body.en li {
+            padding-right: 0;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            right: 0.3rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        body.en li::before {
+            right: auto;
+            left: 0.3rem;
+        }
+
+        .highlight-box {
+            background: rgba(56, 189, 248, 0.08);
+            border-right: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+
+        body.en .highlight-box {
+            border-right: none;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            padding-right: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        body.en .step-list li {
+            padding-right: 0;
+            padding-left: 2.2rem;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 0;
+            top: 2px;
+            width: 22px;
+            height: 22px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        body.en .step-list li::before {
+            right: auto;
+            left: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: auto;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(129, 140, 248, 0.05) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .contact-card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-ar" onclick="switchLang('ar')">العربية</button>
+                <button class="lang-btn" id="btn-en" onclick="switchLang('en')">English</button>
+            </div>
+
+            <div class="app-badge">
+                <div class="app-icon">🧊</div>
+                <div class="app-info">
+                    <h1 id="title-text">Aqwa Block (أقوى بلوك)</h1>
+                    <p id="dev-text">تطوير ونشر: <strong>Zero Studio</strong> | الإصدار: 1.0.0</p>
+                </div>
+            </div>
+
+            <div class="meta-bar">
+                <div class="meta-item"><span>📦</span> <span>Package: com.zerostudio.aqwablock</span></div>
+                <div class="meta-item"><span>📅</span> <span id="date-text">آخر تحديث: أكتوبر 2026</span></div>
+            </div>
+        </header>
+
+        <!-- ================= ARABIC CONTENT ================= -->
+        <main id="content-ar">
+            <div class="card">
+                <h2><span class="icon">📋</span> مقدمة ونظرة عامة</h2>
+                <p>مرحباً بك في لعبة <strong>Aqwa Block (أقوى بلوك)</strong> المطوّرة بواسطة <strong>Zero Studio</strong>. نحن نحترم خصوصيتك ونلتزم بحمايتها بالكامل. توضح سياسة الخصوصية هذه كيفية التعامل مع بياناتك عند تثبيت اللعبة واستخدامها على أجهزة أندرويد.</p>
+                <div class="highlight-box">
+                    <p>✨ <strong>مبدأنا الأساسي:</strong> اللعبة تعمل بالكامل دون الحاجة إلى إنشاء حساب أو تسجيل دخول، ولا نقوم بجمع أو طلب أي بيانات شخصية خاصة بك (كالاسم، أو البريد الإلكتروني، أو رقم الهاتف، أو جهات الاتصال، أو الصور).</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">💾</span> البيانات المحفوظة محلياً (Local Storage)</h2>
+                <p>لضمان تجربة لعب سلسة وتنافسية، يتم حفظ البيانات التالية <strong>داخل ذاكرة جهازك فقط</strong> ولا يتم إرسالها إلى أي خوادم خارجية خاصة بنا:</p>
+                <ul>
+                    <li>أعلى نتيجة تم تحقيقها (High Score) والنقاط الحالية.</li>
+                    <li>رصيد العملات الذهبية المحققة داخل اللعبة.</li>
+                    <li>الثيمات ومظاهر المكعبات المفتوحة والمشتراة.</li>
+                    <li>المراحل المكتملة في طور المغامرة (30 مرحلة).</li>
+                    <li>إعداداتك المفضلة (المؤثرات الصوتية ASMR، الاهتزاز، اللغة).</li>
+                </ul>
+                <p>يمكنك حذف هذه البيانات في أي وقت ببساطة عن طريق مسح بيانات التطبيق أو إلغاء تثبيت اللعبة من جهازك.</p>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">📢</span> الإعلانات والخدمات الخارجية (Third-Party Services)</h2>
+                <p>للحفاظ على اللعبة مجانية للجميع، نستخدم خدمة <strong>Google AdMob</strong> لعرض الإعلانات (الإعلانات البينية ومكافآت الفيديو). تستخدم Google AdMob حزمة تطوير البرمجيات الرسمية (Google Mobile Ads SDK) والتي قد تجمع بشكل آلي ومجهول بعض البيانات التقنية مثل:</p>
+                <ul>
+                    <li><strong>معرّف الإعلانات الخاص بنظام أندرويد (Google Advertising ID):</strong> لتقديم إعلانات ملائمة ومنع تكرار الإعلان ومكافحة الاحتيال.</li>
+                    <li><strong>المعلومات التقنية للجهاز:</strong> نوع الجهاز، إصدار نظام أندرويد، ومستوى دقة الشاشة لتحسين جودة عرض الإعلانات.</li>
+                    <li><strong>الموقع الجغرافي التقريبي:</strong> يتم استنتاجه من عنوان IP لعرض إعلانات مناسبة لمنطقتك.</li>
+                    <li><strong>بيانات التشخيص والأداء:</strong> أوقات استجابة الإعلانات وسجلات الأعطال لضمان استقرار التطبيق.</li>
+                </ul>
+                <p>تخضع هذه البيانات لسياسة خصوصية Google الرسمية، ويمكنك الاطلاع عليها عبر: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent-color);">Google Privacy Policy</a>.</p>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">⚙️</span> كيفية التحكم في الإعلانات وإعادة ضبط المعرّف الإعلاني</h2>
+                <p>تمنحك أنظمة أندرويد كامل الحرية في إلغاء التخصيص الإعلاني أو إعادة تعيين / حذف معرّفك الإعلاني في أي وقت من خلال:</p>
+                <ol class="step-list">
+                    <li>افتح <strong>الإعدادات (Settings)</strong> في هاتفك الأندرويد.</li>
+                    <li>انتقل إلى <strong>Google</strong> ثم اختر <strong>الإعلانات (Ads)</strong>.</li>
+                    <li>انقر على <strong>إعادة ضبط المعرّف الإعلاني (Reset advertising ID)</strong> أو <strong>حذف المعرّف الإعلاني (Delete advertising ID)</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">🛡️</span> أمان البيانات والتشفير</h2>
+                <p>نحرص على تطبيق أعلى معايير الأمان الموصى بها من قِبل Google Play:</p>
+                <ul>
+                    <li>جميع الاتصالات الصادرة عبر حزمة إعلانات Google AdMob مشفرة بالكامل أثناء النقل باستخدام بروتوكولات الأمان القياسية (HTTPS / TLS).</li>
+                    <li>لا نطلب أذونات حساسة لا تتطلبها اللعبة مثل الكاميرا، أو الميكروفون، أو الموقع الدقيق (GPS)، أو جهات الاتصال، أو الرسائل.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">👶</span> خصوصية الأطفال (COPPA & Family Policy)</h2>
+                <p>لعبة <strong>Aqwa Block</strong> مصممة لجميع الأعمار وتناسب جميع أفراد العائلة (Everyone). نحن لا نجمع عن قصد أي معلومات شخصية لتحديد الهوية من الأطفال دون سن 13 عاماً، وتتوافق اللعبة وسياساتها بالكامل مع متطلبات قانون حماية خصوصية الأطفال على الإنترنت (COPPA) وإرشادات برنامج العائلة في متجر Google Play.</p>
+            </div>
+
+            <div class="card contact-card">
+                <h2><span class="icon">📬</span> اتصل بنا (Contact Information)</h2>
+                <p>إذا كانت لديك أي أسئلة أو استفسارات بخصوص سياسة الخصوصية هذه أو اللعبة، يسعدنا تواصلك معنا مباشرة:</p>
+                <p>🏢 <strong>المطور:</strong> Zero Studio</p>
+                <p>✉️ <strong>البريد الإلكتروني للدعم:</strong> <a href="mailto:zerostudio.games@gmail.com">zerostudio.games@gmail.com</a></p>
+            </div>
+        </main>
+
+        <!-- ================= ENGLISH CONTENT ================= -->
+        <main id="content-en" class="hidden">
+            <div class="card">
+                <h2><span class="icon">📋</span> Introduction & Overview</h2>
+                <p>Welcome to <strong>Aqwa Block</strong>, developed and published by <strong>Zero Studio</strong>. We respect your privacy and are committed to protecting it. This Privacy Policy explains how your data is handled when installing and playing the game on Android devices.</p>
+                <div class="highlight-box">
+                    <p>✨ <strong>Core Principle:</strong> The game operates completely without requiring account creation or login. We do NOT collect, request, or store any personal information directly (such as your name, email, phone number, contacts, or photos).</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">💾</span> Locally Stored Data (Device Storage)</h2>
+                <p>To provide a smooth, responsive, and persistent puzzle experience, the following gameplay data is saved <strong>strictly on your local device</strong> and is never uploaded to any proprietary Zero Studio servers:</p>
+                <ul>
+                    <li>High scores and current board score.</li>
+                    <li>Accumulated in-game golden coins.</li>
+                    <li>Unlocked and equipped block themes and backgrounds.</li>
+                    <li>Adventure Mode progression (30 levels).</li>
+                    <li>Audio (ASMR sound effects), haptics, and language preferences.</li>
+                </ul>
+                <p>You can erase this data at any time by clearing the application data or uninstalling the game from your device settings.</p>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">📢</span> Third-Party Services & Advertising (Google AdMob)</h2>
+                <p>To keep the game completely free to play, we utilize <strong>Google AdMob</strong> to display non-intrusive advertisements (banner, interstitial, and rewarded video ads). Google AdMob uses the official Google Mobile Ads SDK, which may automatically and anonymously collect technical device telemetry, including:</p>
+                <ul>
+                    <li><strong>Google Advertising ID (AAID):</strong> Used to deliver non-repetitive ads, measure ad performance, and combat fraudulent activities.</li>
+                    <li><strong>Device & OS Specifications:</strong> Device model, Android OS version, and screen metrics to optimize ad rendering.</li>
+                    <li><strong>Coarse Location:</strong> Inferred from IP address to serve regionally relevant ads.</li>
+                    <li><strong>Diagnostic & Performance Data:</strong> Crash logs and ad latency metrics for system stability.</li>
+                </ul>
+                <p>All data processed by Google is governed by the official Google Privacy Policy available at: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent-color);">Google Privacy Policy</a>.</p>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">⚙️</span> User Control & Resetting Advertising ID</h2>
+                <p>Android gives you full control over ad personalization and advertising identifiers at any time:</p>
+                <ol class="step-list">
+                    <li>Open <strong>Settings</strong> on your Android device.</li>
+                    <li>Navigate to <strong>Google</strong> &gt; <strong>Ads</strong>.</li>
+                    <li>Tap <strong>Reset advertising ID</strong> or <strong>Delete advertising ID</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">🛡️</span> Data Security & Encryption</h2>
+                <p>We adhere to Google Play’s highest security standards:</p>
+                <ul>
+                    <li>All network communications conducted by Google AdMob are encrypted in transit using industry-standard protocols (HTTPS / TLS).</li>
+                    <li>The app requests zero dangerous permissions (no Camera, no Microphone, no Precise GPS Location, no Contacts, no SMS).</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">👶</span> Children's Privacy (COPPA & Family Policy)</h2>
+                <p><strong>Aqwa Block</strong> is a casual puzzle title designed for general audiences of all ages (Everyone). We do not knowingly collect any personally identifiable information from children under the age of 13. The application is fully compliant with the Children's Online Privacy Protection Act (COPPA) and Google Play's Families Policy requirements.</p>
+            </div>
+
+            <div class="card contact-card">
+                <h2><span class="icon">📬</span> Contact Information</h2>
+                <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or the game, please contact us directly:</p>
+                <p>🏢 <strong>Developer:</strong> Zero Studio</p>
+                <p>✉️ <strong>Support Email:</strong> <a href="mailto:zerostudio.games@gmail.com">zerostudio.games@gmail.com</a></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Zero Studio. All Rights Reserved. | Aqwa Block (com.zerostudio.aqwablock)</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const isAr = lang === 'ar';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+            document.body.classList.toggle('en', !isAr);
+
+            document.getElementById('content-ar').classList.toggle('hidden', !isAr);
+            document.getElementById('content-en').classList.toggle('hidden', isAr);
+
+            document.getElementById('btn-ar').classList.toggle('active', isAr);
+            document.getElementById('btn-en').classList.toggle('active', !isAr);
+
+            if (isAr) {
+                document.getElementById('title-text').textContent = 'Aqwa Block (أقوى بلوك)';
+                document.getElementById('dev-text').innerHTML = 'تطوير ونشر: <strong>Zero Studio</strong> | الإصدار: 1.0.0';
+                document.getElementById('date-text').textContent = 'آخر تحديث: أكتوبر 2026';
+            } else {
+                document.getElementById('title-text').textContent = 'Aqwa Block - Privacy Policy';
+                document.getElementById('dev-text').innerHTML = 'Developed & Published by: <strong>Zero Studio</strong> | Version: 1.0.0';
+                document.getElementById('date-text').textContent = 'Last Updated: October 2026';
+            }
+        }
+    </script>
+</body>
+</html>
